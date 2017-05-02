@@ -1,0 +1,40 @@
+.about {
+    position: relative;
+    float: right;
+    opacity: .75;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    margin-left: 230px;
+    margin-right: 50px;
+}
+
+.about-title {
+    font-size: 2rem;
+    color: navy;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about-info {
+    text-align: center;
+    position: relative;
+    color: navy;
+    font-weight: 600;
+}
+
+.about-info-text {
+    color: navy;
+}
+
+.about-bullets {
+    color: navy;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.point {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

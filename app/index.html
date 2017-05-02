@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BlocChat</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/landing.css">
+    <link rel="stylesheet" type="text/css" href="/styles/room_list.css">
+</head>
+<body>
+    
+    <h1 class="sitename">
+    <a ui-sref="landing">BlocChat</a>
+    </h1>
+    
+    <section class="sidenav">
+        <sidebar class="sitenav">
+            <h2 class="nav-header">Welcome!</h2>
+            <ul>
+                <li><a ui-sref="roomList" class="nav-link">Open Rooms</a></li>
+                <li><a class="nav-link">Create a Room</a></li>
+                <li><a class="nav-link">Select Username</a></li>
+            </ul>
+        </sidebar>
+    </section>
+    
+    <section class="clearfix"></section>
+    
+    <ui-view></ui-view>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyDuX7UN4ZJUbZI19Uj5B_gHr_FOS8V_kvA",
+        authDomain: "blocchat-bd5b1.firebaseapp.com",
+        databaseURL: "https://blocchat-bd5b1.firebaseio.com",
+        projectId: "blocchat-bd5b1",
+        storageBucket: "blocchat-bd5b1.appspot.com",
+        messagingSenderId: "1062331188640"
+            };
+        firebase.initializeApp(config);
+    </script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/room.js"></script>
+    <script src="/scripts/controllers/LandingCtrl.js"></script>
+    
+</body>
+</html>

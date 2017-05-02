@@ -1,0 +1,44 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(../assets/messenger_bubbles.jpg);
+    background-position: top right;
+}
+
+.sitename {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    text-decoration-line: none;
+    color: black;
+}
+
+.sidenav {
+    float: left;
+    height: 100%;
+    background-color: whitesmoke;
+    color: blue;
+    z-index: 1;
+    position: fixed;
+    padding-right: 1rem;
+    opacity: .75;
+}
+
+.sidenav .nav-header {
+    color: black;
+    padding-left: 2rem;
+}
+
+.sidenav .nav-link {
+    color: navy;
+    font-size: 1.5rem;
+}
+
+.sidenav .nav-link:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
