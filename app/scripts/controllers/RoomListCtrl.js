@@ -1,6 +1,6 @@
 (function() {
     function RoomListCtrl(Room){
-        this.rooms = 
+        this.rooms = Room.all;
     
     angular
         .module('blocChat')
