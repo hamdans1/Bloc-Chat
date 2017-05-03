@@ -1,0 +1,22 @@
+.rooms-list-available {
+    color: navy;
+    position: relative;
+    float: left;
+    opacity: .75;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    margin-left: 230px;
+    margin-right: 50px;
+}
+
+.rooms-list {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.room-button {}
+
+.room-name {}

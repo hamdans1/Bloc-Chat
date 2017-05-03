@@ -1,6 +1,8 @@
 <section class="rooms-list-available">
-    <div class="rooms-list" ng-repeat="">
-        <div class="room-button">
-        <a ui-sref="rooms" class="room-name"></a>
+    <h2 class="rooms-list-available-title">Open Chat Rooms Available</h2>
+    <div class=" rooms-list " ng-repeat="rooms in roomList.rooms">
+        <div class="room-button ">
+            <a class="room-name ">{{rooms.$id}}</a>
         </div>
     </div>
+</section>
