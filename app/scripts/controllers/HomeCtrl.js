@@ -1,5 +1,5 @@
 (function() {
-    function LandingCtrl(Room) {
+    function HomeCtrl(Room) {
         this.heroTitle = "What We Do";
 
         this.rooms = Room.all;
@@ -7,5 +7,5 @@
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', LandingCtrl]);
+        .controller('HomeCtrl', ['Room', HomeCtrl]);
 })();

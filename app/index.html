@@ -6,15 +6,12 @@
     <title>BlocChat</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/landing.css">
-    <link rel="stylesheet" type="text/css" href="/styles/room_list.css">
-    <link rel="stylesheet" type="text/css" href="/styles/chat_modal.css">
 </head>
 
 <body>
 
     <h1 class="sitename">
-        <a ui-sref="landing">BlocChat</a>
+        <a ui-sref="home">BlocChat</a>
     </h1>
 
     <section class="sidenav">
@@ -23,6 +20,15 @@
             <div ng-controller='ModalCtrl as modals'>
                 <button type="button" class="btn btn-default" ng-click="modals.open()">Create A New Room</button>
             </div>
+            <section class="rooms-list-available">
+                <h2 class="rooms-list-available-title">Open Rooms</h2>
+                <div class=" rooms-list " ng-controller="HomeCtrl as home" ng-repeat="rooms in home.rooms">
+                    <div class="room-button ">
+                        <a class="room-name ">{{rooms.$value}}</a>
+                    </div>
+                </div>
+            </section>
+
         </sidebar>
     </section>
 
@@ -49,8 +55,7 @@
     </script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/room.js"></script>
-    <script src="/scripts/controllers/LandingCtrl.js"></script>
-    <script src="/scripts/controllers/RoomListCtrl.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
 </body>
