@@ -20,10 +20,9 @@
     <section class="sidenav">
         <sidebar class="sitenav">
             <h2 class="nav-header">Welcome!</h2>
-            <ul>
-                <li><a ui-sref="roomList" class="nav-link">Open Rooms</a></li>
-                <li><a class="nav-link">Select Username</a></li>
-            </ul>
+            <div ng-controller='ModalCtrl as modals'>
+                <button type="button" class="btn btn-default" ng-click="modals.open()">Create A New Room</button>
+            </div>
         </sidebar>
     </section>
 
