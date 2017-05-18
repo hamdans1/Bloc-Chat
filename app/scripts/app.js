@@ -11,15 +11,10 @@
                 url: '/',
                 controller: 'LandingCtrl as landing',
                 templateUrl: '/templates/landing.html'
-            })
-            .state('roomList', {
-                url: '/room_list',
-                controller: 'RoomListCtrl as roomList',
-                templateUrl: '/templates/room_list.html'
             });
     }
 
     angular
-        .module('blocChat', ['ui.router', 'firebase'])
+        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
         .config(config);
 })();

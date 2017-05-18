@@ -10,3 +10,16 @@
         </ul>
     </div>
 </section>
+
+<section class="rooms-list-available">
+    <h2 class="rooms-list-available-title">Open Chat Rooms Available</h2>
+    <div class=" rooms-list " ng-repeat="rooms in landing.rooms">
+        <div class="room-button ">
+            <a class="room-name ">{{rooms.$value}}</a>
+        </div>
+    </div>
+</section>
+
+<div ng-controller='ModalCtrl as modals'>
+    <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+</div>

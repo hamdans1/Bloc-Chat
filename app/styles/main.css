@@ -4,6 +4,13 @@ body {
     background-position: top right;
 }
 
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
 .sitename {
     position: relative;
     text-align: center;
@@ -41,4 +48,3 @@ body {
 .clearfix::after {
     clear: both;
 }
-

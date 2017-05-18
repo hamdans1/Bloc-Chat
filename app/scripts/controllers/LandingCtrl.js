@@ -1,9 +1,11 @@
 (function() {
-    function LandingCtrl() {
-        this.heroTitle="What We Do";
+    function LandingCtrl(Room) {
+        this.heroTitle = "What We Do";
+
+        this.rooms = Room.all;
     }
-    
+
     angular
         .module('blocChat')
-        .controller('LandingCtrl', LandingCtrl);
+        .controller('LandingCtrl', ['Room', LandingCtrl]);
 })();

@@ -1,9 +1,10 @@
 (function() {
-    function RoomListCtrl(Room) {
+    function RoomListCtrl(Room, ModalCtrl) {
         this.rooms = Room.all;
+        this.chatModal = ModalCtrl;
     }
     angular
         .module('blocChat')
-        .controller('RoomListCtrl', ['Room', RoomListCtrl]);
+        .controller('RoomListCtrl', ['Room', 'ModalCtrl', RoomListCtrl]);
 
 })();
