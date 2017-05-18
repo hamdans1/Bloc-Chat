@@ -1,21 +1,16 @@
-<section class="about">
-    <h1 class="about-title">{{landing.heroTitle}}</h1>
-    <div class="about-info">
-        <p class="about-info-text">BlocChat was designed to bring a simple clean messaging service with a minimalist approach. We offer direct user-to-user contact without the fuss. Come and see what we're all about!</p>
-        <ul class="about-bullets">
-            <li class="point">user-designed usernames</li>
-            <li class="point">slick ui</li>
-            <li class="point">create chatrooms</li>
-            <li class="point">message people you know</li>
-        </ul>
-    </div>
-</section>
-
-<section class="rooms-list-available">
-    <h2 class="rooms-list-available-title">Open Chat Rooms Available</h2>
-    <div class=" rooms-list " ng-repeat="rooms in landing.rooms">
-        <div class="room-button ">
-            <a class="room-name ">{{rooms.$value}}</a>
+<section class="sidenav">
+    <sidebar class="sitenav">
+        <h2 class="nav-header">Welcome!</h2>
+        <div ng-controller='ModalCtrl as modals'>
+            <button type="button" class="btn btn-default" ng-click="modals.open()">Create A New Room</button>
         </div>
-    </div>
+        <section class="rooms-list-available">
+            <h2 class="rooms-list-available-title">Open BlocChats</h2>
+            <div class=" rooms-list " ng-repeat="rooms in landing.rooms">
+                <div class="room-button ">
+                    <a class="room-name ">{{rooms.$value}}</a>
+                </div>
+            </div>
+        </section>
+    </sidebar>
 </section>
