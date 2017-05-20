@@ -8,7 +8,7 @@
             <h2 class="rooms-list-available-title">Open BlocChats</h2>
             <div class=" rooms-list " ng-repeat="rooms in landing.rooms">
                 <div class="room-button ">
-                    <a class="room-name " ng-click="landing.getRoom(rooms.$value);landing.message.getByRoomId(rooms.$id)">{{rooms.$value}}</a>
+                    <a class="room-name " ng-click="landing.message.getByRoomId(rooms.$id)">{{rooms.$value}}</a>
                 </div>
             </div>
         </section>
@@ -16,10 +16,10 @@
 </section>
 
 <section class="room-message-container">
-    <h2 class="message-room-name">{{message.roomId}}</h2>
+    <h2 class="message-room-name">{{landing.message.roomId}}</h2>
     <div class="message-container">
-        <p class="message-username">{{message.username}}</p>
-        <em class="message-timestamp">{{message.sentAt}}</em>
-        <p class="message-content">{{message.content}}</p>
+        <p class="message-username">{{landing.message.username}}</p>
+        <em class="message-timestamp">{{landing.message.sentAt}}</em>
+        <p class="message-content">{{landing.message.content}}</p>
     </div>
 </section>
