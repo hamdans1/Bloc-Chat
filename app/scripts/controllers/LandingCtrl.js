@@ -1,11 +1,19 @@
 (function() {
-    function LandingCtrl(Room) {
-        this.heroTitle = "What We Do";
+    function LandingCtrl(Room, Message) {
+        var currentRoom = null;
 
         this.rooms = Room.all;
+
+        this.getRoom = function(roomName) {
+            currentRoom = roomName;
+            console.log(currentRoom);
+        };
+
+        this.message = Message;
+
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', LandingCtrl]);
+        .controller('LandingCtrl', ['Room', 'Message', LandingCtrl]);
 })();

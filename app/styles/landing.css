@@ -9,9 +9,7 @@
     opacity: .75;
 }
 
-.nav-header {
-    text-align: center;
-}
+.nav-header {}
 
 .modal-btn {
     position: center;
@@ -37,4 +35,30 @@
 .room-name:hover {
     color: dodgerblue;
     text-decoration: underline;
+}
+
+.room-message-container {
+    position: relative;
+    margin-left: 230px;
+    margin-right: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: aliceblue;
+    opacity: .9;
+}
+
+.message-room-name {}
+
+.message-container {}
+
+.message-username {
+    font-size: 1.3rem;
+}
+
+.message-timestamp {
+    float: right;
+    font-size: 1.3rem;
+}
+
+.message-content {
+    font-size: 1.2rem;
 }
