@@ -16,10 +16,10 @@
 </section>
 
 <section class="room-message-container">
-    <h2 class="message-room-name">{{landing.message.roomId}}</h2>
-    <div class="message-container">
-        <p class="message-username">{{landing.message.username}}</p>
-        <em class="message-timestamp">{{landing.message.sentAt}}</em>
-        <p class="message-content">{{landing.message.content}}</p>
+    <h2 class="message-room-name"></h2>
+    <div class="message-container" ng-repeat="messages in landing.message">
+        <p class="message-username">{{message.currentMessage.username}}</p>
+        <em class="message-timestamp">{{message.currentMessage.sentAt}}</em>
+        <p class="message-content">{{message.currentMessage.content}}</p>
     </div>
 </section>
