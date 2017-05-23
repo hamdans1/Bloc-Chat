@@ -13,7 +13,6 @@
         Message.getByRoomId = function(roomId) {
             currentRoomId = roomId;
             Message.currentMessage = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
-            console.log(Message.currentMessage);
         };
 
         return Message;
