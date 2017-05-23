@@ -13,6 +13,7 @@
 
 .modal-btn {
     position: center;
+    cursor: pointer;
 }
 
 .rooms-list-available {}
@@ -30,6 +31,7 @@
 .room-name {
     font-size: 1.2rem;
     text-align: center;
+    cursor: pointer;
 }
 
 .room-name:hover {
@@ -46,19 +48,18 @@
     opacity: .9;
 }
 
-.message-room-name {}
-
-.message-container {}
+.individual-message-container {}
 
 .message-username {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    color: dodgerblue;
 }
 
 .message-timestamp {
     float: right;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 .message-content {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }

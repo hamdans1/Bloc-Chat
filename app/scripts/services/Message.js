@@ -6,12 +6,12 @@
 
         var messages = $firebaseArray(ref);
 
-        var currentRoom = null;
+        var currentRoomId = null;
 
         this.currentMessage = {};
 
         Message.getByRoomId = function(roomId) {
-            var currentRoom = roomId;
+            currentRoomId = roomId;
             Message.currentMessage = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
             console.log(Message.currentMessage);
         };
