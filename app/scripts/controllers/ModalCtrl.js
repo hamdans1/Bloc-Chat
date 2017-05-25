@@ -1,25 +1,27 @@
 (function() {
     function ModalCtrl($uibModal, $log, Room) {
-        this.open = function() {
+        var $ctrl = this;
+
+        $ctrl.open = function() {
             var modalInstance = $uibModal.open({
-                animation: this.animationsEnabled,
+                ariaLabelledBy: 'chat-modal-title',
+                ariaDescribedBy: 'chat-modal-body',
                 templateUrl: '/templates/chat_modal.html',
                 controller: 'ModalInstanceCtrl',
-                controllerAs: 'chatModal'
+                controllerAs: 'chatModal',
+                keyboard: false,
+                size: 'sm'
 
             });
 
             modalInstance.result.then(function(name) {
-                this.room = name;
-                Room.create(this.room);
+                $ctrl.room = name;
+                Room.create($ctrl.room);
             }, function() {
                 $log.info('Modal dismissed at ' + new Date());
             });
         };
 
-        this.toggleAnimation = function() {
-            this.animationsEnabled = !this.animationsEnabled;
-        };
     }
 
     angular

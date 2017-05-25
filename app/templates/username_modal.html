@@ -1,0 +1,17 @@
+<div>
+    <div class="modal-header">
+        <h2 class="modal-title" id="username-modal-title">Welcome to BlocChat!</h2>
+    </div>
+    <div class="modal-body" id="username-modal-body">
+        Enter your username:
+        <form ng-submit="modal.ok()">
+            <div class="username-submission-form">
+                <input type="text" class="username-submission" ng-model="usernameModal.name" placeholder="Enter a username" autofocus>
+                <h4></h4>
+            </div>
+        </form>
+    </div>
+    <div class="username-modal-buttons">
+        <button class="btn btn-primary" type="button" ng-click="usernameModal.ok()">Set Username</button>
+    </div>
+</div>

@@ -14,7 +14,37 @@
             });
     }
 
+    function BlocChatCookies($cookies, $uibModal) {
+        var $ctrl = this;
+        var currentUser = $cookies.get('blocChatCurrentUser');
+        if (!currentUser || curentUser === '') {
+            var modalInstance = $uibModal.open({
+                animation: $ctrl.animationsEnabled,
+                templateUrl: '/templates/username_modal.html',
+                controller: 'UsernameInstanceCtrl',
+                controllerAs: 'usernameModal',
+                ariaDescribedBy: 'username-modal-body',
+                ariaLabelledBy: 'username-modal-title',
+                keyboard: false,
+                backdrop: 'static',
+                size: 'sm',
+
+            });
+
+            $ctrl.toggleAnimation = function() {
+
+                $ctrl.animationEnabled = !$ctrl.animationEnabled;
+            }
+
+            modalInstance.result.then(function(name) {
+                this.username = name;
+                $cookies.put('blocChatCurrentUser', name);
+            });
+        }
+    }
+
     angular
-        .module('blocChat', ['ui.bootstrap', 'ui.router', 'firebase'])
-        .config(config);
+        .module('blocChat', ['ngCookies', 'ui.bootstrap', 'ui.router', 'firebase'])
+        .config(config)
+        .run(['$cookies', '$uibModal', BlocChatCookies]);
 })();
