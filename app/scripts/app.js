@@ -17,7 +17,7 @@
     function BlocChatCookies($cookies, $uibModal) {
         var $ctrl = this;
         var currentUser = $cookies.get('blocChatCurrentUser');
-        if (!currentUser || curentUser === '') {
+        if (!currentUser || currentUser === '') {
             var modalInstance = $uibModal.open({
                 animation: $ctrl.animationsEnabled,
                 templateUrl: '/templates/username_modal.html',

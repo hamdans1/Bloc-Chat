@@ -23,3 +23,12 @@
         <p class="message-content ">{{currentMessage.content}}</p>
     </div>
 </section>
+
+<section class="send-message-form">
+    <div>
+        <form class="message-input" ng-submit="landing.message.send()">
+            <input type="text" placeholder="Enter Message Text Here" />
+            <input type="submit" id='submit' value="Send" />
+        </form>
+    </div>
+</section>

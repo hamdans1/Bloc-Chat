@@ -3,7 +3,7 @@
         this.ok = function(name) {
             var currentUser = this.name;
             if (currentUser) {
-                $uibModalInstance.close();
+                $uibModalInstance.close(currentUser);
             }
         };
     }
