@@ -4,7 +4,6 @@
         this.rooms = Room.all;
 
         this.message = Message;
-
     }
 
     angular

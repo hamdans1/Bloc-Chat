@@ -8,20 +8,47 @@
 
         var currentRoomId = null;
 
+        var convertTimeStamp = function(timestamp) {
+            var d = new Date(timestamp),
+                yyyy = d.getFullYear(),
+                mm = ('0' + (d.getMonth() + 1)).slice(-2),
+                dd = ('0' + d.getDate()).slice(-2),
+                hh = d.getHours(),
+                h = hh,
+                min = ('0' + d.getMinutes()).slice(-2),
+                ampm = 'AM',
+                time;
+
+            if (hh > 12) {
+                h = hh - 12;
+                ampm = 'PM';
+            } else if (hh === 12) {
+                h = 12;
+                ampm = 'PM';
+            } else if (hh == 0) {
+                h = 12;
+            }
+            time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min + ' ' + ampm;
+
+            return time;
+        }
+
         this.currentMessage = {};
+
+        this.messageString = "";
 
         Message.getByRoomId = function(roomId) {
             currentRoomId = roomId;
             Message.currentMessage = $firebaseArray(ref.orderByChild("roomId").equalTo(roomId));
         };
 
-        Message.send = function(newMessage) {
+        Message.send = function() {
             if (currentRoomId) {
                 messages.$add({
                     username: $cookies.get('blocChatCurrentUser'),
-                    content: newMessage,
+                    content: Message.messageString,
                     roomId: currentRoomId,
-                    sentAt: Date.now()
+                    sentAt: convertTimeStamp(Date.now())
                 });
             }
         }

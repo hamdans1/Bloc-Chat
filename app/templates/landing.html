@@ -27,7 +27,7 @@
 <section class="send-message-form">
     <div>
         <form class="message-input" ng-submit="landing.message.send()">
-            <input type="text" placeholder="Enter Message Text Here" />
+            <input type="text" ng-model="landing.message.messageString" placeholder="Enter Message Text Here" />
             <input type="submit" id='submit' value="Send" />
         </form>
     </div>
